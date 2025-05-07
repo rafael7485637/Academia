@@ -69,7 +69,7 @@
                 <button>Inscrever-se</button>
             </div>
             <div style="float: right;">
-                <img style="width: 70%;" class="mt-5" src="/img/coracao.png" alt="Feia que treina">
+                <img style="width: 70%;" class="mt-5" src="/img/Raquel.png" alt="Feia que treina">
             </div>
         </div>
       </div>
