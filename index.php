@@ -66,7 +66,7 @@
                 <h1 class="pb-1 pt-5" style="color: red; font-size: 50px;">AULAS FITNESS</h1>
                 <h3 style="font-size: 35px;" class="pb-5">Mudando vidas, aqui mesmo</h3>
                 <p style="font-size: 27px;">Com mais de 100 aulas para escolher, oferecemos <br> algo para todas as idades, níveis de <br> condicionamento físico e habilidades. Temos <br> favoritos de condicionamento físico como Zumba,<br> Spin e Yoga, bem como aulas novas e exclusivas <br> como Group Cycle.</p>
-                <button>Inscrever-se</button>
+                <a class="cadastro" href="cadastro.php">Inscrever-se</a>
             </div>
             <div style="float: right;">
                 <img style="width: 70%;" class="mt-5" src="/img/Raquel.png" alt="Feia que treina">
