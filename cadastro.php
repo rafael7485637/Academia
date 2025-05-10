@@ -19,7 +19,7 @@
     <header>
         <nav class="navbar bg-body-tertiary">
             <div class="container-fluid  container-lg py-3">
-              <a class="navbar-brand" href="#">Academia da Raquel</a>
+              <a class="navbar-brand" href="index.php">Prof. Raquel</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -60,8 +60,8 @@
           </nav>
     </header>
     <main>
-  <div>
-    <div class="container-lg">
+
+    <div class="container-lg mt-4">
       <form>
         <div class="mb-3">
           <label for="nome" class="form-label">Nome</label>
@@ -81,7 +81,7 @@
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
     </div>
-  </div>
+  
 
     </main>
     <footer>

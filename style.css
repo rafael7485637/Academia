@@ -1,5 +1,9 @@
 
-.montserrat-fonte {
+  body {
+  overflow-x: hidden;
+  }
+
+  .montserrat-fonte {
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: 500;

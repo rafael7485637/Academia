@@ -19,7 +19,7 @@
     <header>
         <nav class="navbar bg-body-tertiary">
             <div class="container-fluid  container-lg py-3">
-              <a class="navbar-brand" href="#">Academia da Raquel</a>
+              <a class="navbar-brand" href="#">Prof. Raquel</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -88,12 +88,49 @@
                   <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>
               </div>
+
+              
           
             <?php
           }
         ?>
         </div>
+
+        <div class="row">
+          <div class="col-6 text-center mt-5">
+            <h1>Treinamentos de <br> Fitness Completos</h1>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit <br> esse cillum dolore eu fugiat nulla pariatur. Excepteur sint<br> occaecat cupidatat non proident, sunt in culpa qui officia<br> deserunt mollit anim id est laborum.</p>
+          </div>
+          <div class="col-6">
+             <img style="width: 70%;" class="mt-5" src="/img/Raquel.png" alt="Feia que treina">
+          </div>
+        </div>
+
       </div>
+
+
+    <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false" data-bs-ride="carousel" data-bs-interval="3000" data-bs-pause="false">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="/img/c1.png" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="/img/c2.png" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="/img/c3.png" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
 
       
     </main>
