@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-    <title>Academia</title>
+    <title>Formulario</title>
 </head>
 <body class="montserrat-fonte">
     <header>
@@ -60,41 +60,6 @@
           </nav>
     </header>
     <main>
-      <div style="background-color: lightgray;">
-        <div class="container-lg d-flex justify-content-between">
-            <div>
-                <h1 class="pb-1 pt-5" style="color: red; font-size: 50px;">AULAS FITNESS</h1>
-                <h3 style="font-size: 35px;" class="pb-5">Mudando vidas, aqui mesmo</h3>
-                <p style="font-size: 27px;">Com mais de 100 aulas para escolher, oferecemos <br> algo para todas as idades, níveis de <br> condicionamento físico e habilidades. Temos <br> favoritos de condicionamento físico como Zumba,<br> Spin e Yoga, bem como aulas novas e exclusivas <br> como Group Cycle.</p>
-                <button>Inscrever-se</button>
-            </div>
-            <div style="float: right;">
-                <img style="width: 70%;" class="mt-5" src="/img/Raquel.png" alt="Feia que treina">
-            </div>
-        </div>
-      </div>
-
-      <div class="cartoes">
-        <div class="row justify-content-center">
-        <?php
-          for ($i=0; $i < 3; $i++) { 
-            ?>
-
-              <div class="card mx-5 my-4" style="width: 18rem;">
-                <img src="/img/<?=$i?>.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-          
-            <?php
-          }
-        ?>
-        </div>
-      </div>
-
       
     </main>
     <footer>
