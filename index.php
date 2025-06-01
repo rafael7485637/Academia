@@ -14,6 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <title>Academia</title>
+    <link rel="icon" href="" type="image/x-icon">
 </head>
 <body class="montserrat-fonte">
     <header>
@@ -132,7 +133,7 @@
     </div>
 
 
-      
+
     </main>
     <footer>
       

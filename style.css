@@ -22,3 +22,43 @@
     border: none; 
     border-radius: 5px
   }
+
+
+  @media (max-width: 991.98px) {
+      .container-lg.d-flex {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center;
+      }
+      .container-lg.d-flex > div {
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+      .container-lg.d-flex img {
+        margin-top: 2rem !important;
+        margin-bottom: 2rem !important;
+        width: 70% !important;
+        min-width: 150px;
+        max-width: 350px;
+      }
+      .cartoes .row.justify-content-center {
+        flex-direction: column !important;
+        align-items: center !important;
+      }
+      .card.mx-5 {
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+      .cartoes .row > .col-6,
+      .cartoes .row > .col-6.text-center {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+      .cartoes .row > .col-6 img {
+        margin-top: 2rem !important;
+        margin-bottom: 2rem !important;
+        width: 70% !important;
+        min-width: 150px;
+        max-width: 350px;
+      }
+    }
