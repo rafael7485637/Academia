@@ -63,14 +63,14 @@
     <main>
       <div style="background-color: lightgray;">
         <div class="container-lg d-flex justify-content-between">
-            <div>
+            <div class="col-6" style="padding-bottom: 5%;">
                 <h1 class="pb-1 pt-5" style="color: red; font-size: 50px;">AULAS FITNESS</h1>
                 <h3 style="font-size: 35px;" class="pb-5">Mudando vidas, aqui mesmo</h3>
                 <p style="font-size: 27px;">Com mais de 100 aulas para escolher, oferecemos <br> algo para todas as idades, níveis de <br> condicionamento físico e habilidades. Temos <br> favoritos de condicionamento físico como Zumba,<br> Spin e Yoga, bem como aulas novas e exclusivas <br> como Group Cycle.</p>
                 <a class="cadastro" href="cadastro.php">Inscrever-se</a>
             </div>
-            <div style="float: right;">
-                <img style="width: 70%;" class="mt-5" src="/img/Raquel.png" alt="Feia que treina">
+            <div class="col-6">
+                <img style="width: 80%;" class="mt-5" src="/img/Raquel2.png" alt="Feia">
             </div>
         </div>
       </div>
@@ -78,35 +78,24 @@
       <div class="cartoes">
         <div class="row justify-content-center">
         <?php
-          for ($i=0; $i < 3; $i++) { 
-            ?>
+          $imagens = ["0.png","1.png","2.png","nice.png","mm.png","gemido.png"];
 
-              <div class="card mx-5 my-4" style="width: 18rem;">
-                <img src="/img/<?=$i?>.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+          for ($i=0; $i < 6; $i++) { 
+            ?>
+              <div class="col-12 col-sm-6 col-lg-4 d-flex justify-content-center">
+                <div class="card mx-3 my-4" style="width: 18rem;">
+                  <img src="/img/<?=$imagens[$i]?>" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
                 </div>
               </div>
-
-              
-          
             <?php
           }
         ?>
         </div>
-
-        <div class="row">
-          <div class="col-6 text-center mt-5">
-            <h1>Treinamentos de <br> Fitness Completos</h1>
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit <br> esse cillum dolore eu fugiat nulla pariatur. Excepteur sint<br> occaecat cupidatat non proident, sunt in culpa qui officia<br> deserunt mollit anim id est laborum.</p>
-          </div>
-          <div class="col-6">
-             <img style="width: 70%;" class="mt-5" src="/img/Raquel.png" alt="Feia que treina">
-          </div>
-        </div>
-
       </div>
 
 
@@ -123,11 +112,11 @@
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="carousel-control" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
       </button>
       <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="carousel-control" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
     </div>
