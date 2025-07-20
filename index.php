@@ -12,53 +12,24 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
+   
     <title>Academia</title>
     <link rel="icon" href="" type="image/x-icon">
 </head>
 <body class="montserrat-fonte">
     <header>
-        <nav class="navbar bg-body-tertiary">
-            <div class="container-fluid  container-lg py-3">
-              <a class="navbar-brand" href="#">Prof. Raquel</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header">
-                  <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                    <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Dropdown
-                      </a>
-                      <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li>
-                          <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                  <form class="d-flex mt-3" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                  </form>
-                </div>
-              </div>
+       <nav id="navbar">
+
+          <a class="titulo" href="#"> <h4>PROF. Raquel</h4></a>
+          <button class="menu-btn" onclick="abrirMenu()">☰</button>
+            <div id="sidebar" class="sidebar">
+              <a href="javascript:void(0)" class="close-btn" onclick="fecharMenu()">×</a>
+              <a href="#">Início</a>
+              <a href="#">Sobre</a>
+              <a href="#">Serviços</a>
+              <a href="#">Contato</a>
             </div>
-          </nav>
+       </nav>
     </header>
     <main>
       <div style="background-color: lightgray;">
@@ -127,5 +98,7 @@
     <footer>
       
     </footer>
+
+   <script src="./script.js"></script>
 </body>
 </html>
