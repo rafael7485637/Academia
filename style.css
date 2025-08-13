@@ -1,169 +1,148 @@
+/* ===== Reset básico ===== */
 body {
-  overflow-x: hidden;
-  }
+    margin: 0;
+    overflow-x: hidden;
+}
 
-  .montserrat-fonte {
+.montserrat-fonte {
     font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
+}
+
+/* ===== Container padrão ===== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 16px;
+    box-sizing: border-box;
+}
+
+/* ===== Barra de navegação ===== */
+nav {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titulo {
+    text-decoration: none;
+    color: black;
+}
+
+/* Botão do menu */
+.menu-btn {
+    cursor: pointer;
+    padding: 10px 15px;
+    color: white;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+}
+
+/* ===== Menu lateral ===== */
+.sidebar {
+    height: 100%;
+    width: 0; /* controlado pelo JS */
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #333;
+    overflow-x: hidden;
+    transition: width 0.4s ease;
+    padding-top: 60px;
+    z-index: 999;
+    box-shadow: -4px 0 10px rgba(0,0,0,0.3);
+}
+
+.sidebar a {
+    padding: 12px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar a:hover {
+    background-color: rgba(255,255,255,0.1);
+}
+
+/* Botão de fechar no menu lateral */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+/* ===== Seção Início ===== */
+#inicio {
+    padding: 50px 0;
+}
+
+.inicio-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+}
+
+.textoInicio {
+    flex: 1 1 500px;
+}
+
+.textoInicio h1 {
+    color: red;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.textoInicio h3 {
     font-weight: 500;
-    font-style: normal;
-  }
+    margin-bottom: 20px;
+}
 
-  /*barra de navegação*/
+.textoInicio p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
 
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        /* Botão do menu */
-       nav {
-            padding: 15px;
-            display: flex;
-            justify-content: space-between; /* já garante os itens nas extremidades */
-            align-items: center;
-        }
-
-
-        .titulo {
-          text-decoration: none;
-          color: black;
-        }
-
-        /* Botão do menu */
-        .menu-btn {
-            cursor: pointer;
-            padding: 15px;
-            color: white;
-            background-color: #333;
-            border: none;
-            border-radius: 5px;
-        }
-
-        /* Navbar lateral */
-        .sidebar {
-            height: 100%;
-            width: 0;
-            position: fixed;
-            z-index: 999;
-            top: 0;
-            right: 0;
-            background-color: #333;
-            overflow-x: hidden;
-            transition: 0.3s;
-            padding-top: 60px;
-        }
-
-        .sidebar a {
-            padding: 10px 20px;
-            text-decoration: none;
-            font-size: 18px;
-            color: white;
-            display: block;
-            transition: 0.2s;
-        }
-
-        .sidebar a:hover {
-            background-color: #575757;
-        }
-
-        /* Botão de fechar */
-        .close-btn {
-            position: absolute;
-            top: 10px;
-            right: 20px;
-            font-size: 30px;
-            cursor: pointer;
-            color: white;
-        }
-
-  
-  /*.*/
-
-/*Inicio*/
-
-
-
-/**/
-
-  /*cartões*/
-  .cartoes{
+.botaoCadastro {
+    display: inline-block;
+    padding: 12px 20px;
     background-color: red;
-  }
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
 
+.botaoCadastro:hover {
+    background-color: darkred;
+}
 
-  @media (max-width: 991.98px) {
-      .container-lg.d-flex {
-        flex-direction: column !important;
-        align-items: center !important;
+/* ===== Imagem ===== */
+.imgInicio {
+    flex: 1 1 400px;
+    text-align: center;
+}
+
+.imgInicio img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+/* ===== Responsivo ===== */
+@media (max-width: 768px) {
+    .inicio-container {
+        flex-direction: column;
         text-align: center;
-      }
-      .container-lg.d-flex > div {
-        width: 100% !important;
-        max-width: 100% !important;
-      }
-      .container-lg.d-flex img {
-        margin-top: 2rem !important;
-        margin-bottom: 2rem !important;
-        width: 70% !important;
-        min-width: 150px;
-        max-width: 350px;
-      }
-      .cartoes .row.justify-content-center {
-        flex-direction: column !important;
-        align-items: center !important;
-      }
-      .card.mx-5 {
-        margin-left: auto !important;
-        margin-right: auto !important;
-      }
-      .cartoes .row > .col-6,
-      .cartoes .row > .col-6.text-center {
-        flex: 0 0 100%;
-        max-width: 100%;
-      }
-      .cartoes .row > .col-6 img {
-        margin-top: 2rem !important;
-        margin-bottom: 2rem !important;
-        width: 70% !important;
-        min-width: 150px;
-        max-width: 350px;
-      }
     }
-
-  /**/
-
-    /*css do cadastro*/
-.cadastro{
-  width: 100%;
-  padding: 20px;
-  background-color: rgb(237, 237, 237);
-  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+    .textoInicio, .imgInicio {
+        flex: 1 1 100%;
+    }
 }
-
-.cadastro form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.cadastro form div {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 100%;
-  max-width: 65%;
-}
-
-.cadastro label {
-  margin-bottom: 5px;
-  font-weight: 500;
-}
-
-.cadastro input {
-  width: 100%;
-  box-sizing: border-box;
-  border-radius: 5px;
-}
-
-/**/

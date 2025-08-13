@@ -3,142 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-   
     <title>Academia</title>
     <link rel="icon" href="" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fonte -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body class="montserrat-fonte">
-    <header>
-       <nav id="navbar">
 
-          <a class="titulo" href="#"> <h4>PROF. Raquel</h4></a>
-          <button class="menu-btn" onclick="abrirMenu()">☰</button>
-            <div id="sidebar" class="sidebar">
-              <a href="javascript:void(0)" class="close-btn" onclick="fecharMenu()">×</a>
-              <a href="#">Início</a>
-              <a href="#">Sobre</a>
-              <a href="#">Serviços</a>
-              <a href="#">Contato</a>
+<header>
+    <nav id="navbar">
+        <a class="titulo" href="#"> <h4>PROF. Raquel</h4></a>
+        <button class="menu-btn" onclick="abrirMenu()">☰</button>
+        <div id="sidebar" class="sidebar">
+            <a href="javascript:void(0)" class="close-btn" onclick="fecharMenu()">×</a>
+            <a href="#">Início</a>
+            <a href="#">Sobre</a>
+            <a href="#">Serviços</a>
+            <a href="#">Contato</a>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <section id="inicio">
+        <div class="container inicio-container">
+            <div class="textoInicio">
+                <h1>AULAS FITNESS</h1>
+                <h3>Mudando vidas, aqui mesmo</h3>
+                <p>Com mais de 100 aulas para escolher, oferecemos algo para todas as idades, níveis de condicionamento físico e habilidades. Temos favoritos como Zumba, Spin e Yoga, além de aulas novas e exclusivas como Group Cycle.</p>
+                <a class="botaoCadastro" href="cadastro.php">Inscrever-se</a>
             </div>
-       </nav>
-    </header>
-    <main>
-      
-      <div >
-        <div>
-          <h1>AULAS FITNESS</h1>
-          <h3>Mudando vidas, aqui mesmo</h3>
-          <p>Com mais de 100 aulas para escolher, oferecemos <br> algo para todas as idades, níveis de <br> condicionamento físico e habilidades. Temos <br> favoritos de condicionamento físico como Zumba,<br> Spin e Yoga, bem como aulas novas e exclusivas <br> como Group Cycle.</p>
-            <a class="botaoCadastro" href="cadastro.php">Inscrever-se</a>
+            <div class="imgInicio">
+                <img src="/img/Raquel2.png" alt="Imagem aula fitness">
+            </div>
         </div>
-        <div>
-          <img src="/img/Raquel2.png" alt="Feia">
-        </div>
-      </div>
+    </section>
+</main>
 
-
-      <div class="cartoes">
-        <div class="row justify-content-center">
-              <div class="col-12 col-sm-6 col-lg-4 d-flex justify-content-center">
-                <div class="card mx-3 my-4" style="width: 18rem;">
-                  <img src="/img/0.png" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
-                </div>
-              </div>
-               <div class="col-12 col-sm-6 col-lg-4 d-flex justify-content-center">
-                <div class="card mx-3 my-4" style="width: 18rem;">
-                  <img src="/img/1.png" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
-                </div>
-              </div>
-               <div class="col-12 col-sm-6 col-lg-4 d-flex justify-content-center">
-                <div class="card mx-3 my-4" style="width: 18rem;">
-                  <img src="/img/2.png" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
-                </div>
-              </div> <div class="col-12 col-sm-6 col-lg-4 d-flex justify-content-center">
-                <div class="card mx-3 my-4" style="width: 18rem;">
-                  <img src="/img/mm.png" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
-                </div>
-              </div> <div class="col-12 col-sm-6 col-lg-4 d-flex justify-content-center">
-                <div class="card mx-3 my-4" style="width: 18rem;">
-                  <img src="/img/nice.png" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
-                </div>
-              </div>
-               <div class="col-12 col-sm-6 col-lg-4 d-flex justify-content-center">
-                <div class="card mx-3 my-4" style="width: 18rem;">
-                  <img src="/img/gemido.png" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
-                </div>
-              </div> 
-        </div>
-      </div>
-
-
-    <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false" data-bs-ride="carousel" data-bs-interval="3000" data-bs-pause="false">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="/img/c1.png" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="/img/c2.png" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="/img/c3.png" class="d-block w-100" alt="...">
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
-        <span class="carousel-control" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
-        <span class="carousel-control" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-
-
-
-    </main>
-    <footer>
-      
-    </footer>
-
-   <script src="./script.js"></script>
+<script src="./script.js"></script>
 </body>
 </html>
