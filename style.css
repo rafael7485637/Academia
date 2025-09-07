@@ -79,19 +79,133 @@ nav {
 
 /* ===== Seção Início ===== */  
 
-main h1 {
-    text-align: center;
-    justify-content: center;
-    font-size: 48px;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+.inicio{
+    padding-top: 125px;
+    padding-bottom: 150px;
 }
-main {
-    background-image: url('/img/academia.jpg');
+
+.inicio h1 {
+    text-align: left;
+    justify-content: left;
+    font-size: 60px;
+    color: white;
+    text-shadow: 4px 4px 8px rgba(0,0,0,0.7);
+    margin-bottom: 30px;
+}
+
+.inicio h1.titulo {
+    font-size: 75px;
+    margin-bottom: 10px;
+}
+
+.inicio a{
+    text-decoration: none;
+    color: white;
+    background-color: rgb(54, 54, 224);
+    border-radius: 20px;
+    padding: 10px;
+}
+.inicio a:hover{
+    background-color: rgb(54, 54, 224);
+    color: black;
+    padding: 12px;
+    transition: 0.3s;
+}
+
+section.inicio {
+    background-image: url('/img/fundo.jpg');
     background-size: cover;
-    background-position: center top;
-    background-repeat: no-repeat;
-    margin-top: 0;
-    padding-top: 40px; /* Espaço para separar do nav, ajuste conforme necessário */
-    min-height: 80vh;  /* Garante que a imagem ocupe boa parte da tela */
+}
+
+/* ===== Carrossel de Cards ===== */
+
+.carrossel {
+  text-align: center;
+  padding: 80px 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.carrossel h1 {
+  font-size: 50px;
+  margin-bottom: 40px; /* espaço entre o título e o carrossel */
+  color: white;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+}
+
+.carousel-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px; /* espaço entre botões e carrossel */
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  border-radius: 20px;
+  overflow: hidden;
+  background: #333;
+  transition: all 0.5s ease;
+  opacity: 0.6;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Camadas */
+.card.far {        /* mais distante */
+  width: 160px;
+  height: 260px;
+  opacity: 0.5;
+  transform: scale(0.75);
+  z-index: 0;
+}
+
+.card.near {       /* lateral próxima */
+  width: 220px;
+  height: 340px;
+  opacity: 0.7;
+  transform: scale(0.9);
+  z-index: 1;
+}
+
+.card.active {     /* central */
+  width: 300px;
+  height: 420px;
+  opacity: 1;
+  transform: scale(1);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.8);
+  z-index: 2;
+}
+
+.carrossel button {
+  background: none;
+  border: 2px solid white;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.carrossel button:hover {
+  background: white;
+  color: black;
 }

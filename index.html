@@ -16,7 +16,7 @@
 
 <header>
     <nav id="navbar">
-        <a class="titulo" href="#"> <h4>PROF. Raquel</h4></a>
+        <a class="titulo" href="#"> <h4>Prof. Raquel Zanelatto</h4></a>
         <button class="menu-btn" onclick="abrirMenu()">☰</button>
         <div id="sidebar" class="sidebar">
             <a href="javascript:void(0)" class="close-btn" onclick="fecharMenu()">×</a>
@@ -29,8 +29,35 @@
 </header>
 
 <main>
-    <h1>Exercicio <br> corporal como <br> estilo de vida</h1>
-    <a href="#">Agende agora!</a>
+    <section class="inicio">
+        <div class="container">
+            <h1 class="titulo">Vagas limitadas!</h1>
+            <h1>Consultoria<br> online</h1>
+            <a href="#">Quero Fazer Meu Cadastro</a>
+        </div>
+    </section>
+
+    <section class="carrossel">
+        <h1>Confira alguns resultados!</h1>
+
+        <div class="carousel-wrapper">
+            <button id="prev">←</button>
+
+            <div class="carousel">
+            <div class="card"><img src="https://picsum.photos/id/1015/500/800" alt=""></div>
+            <div class="card"><img src="https://picsum.photos/id/1016/500/800" alt=""></div>
+            <div class="card active"><img src="https://picsum.photos/id/1018/500/800" alt=""></div>
+            <div class="card"><img src="https://picsum.photos/id/1020/500/800" alt=""></div>
+            <div class="card"><img src="https://picsum.photos/id/1024/500/800" alt=""></div>
+            </div>
+
+            <button id="next">→</button>
+        </div>
+</section>
+
+
+
+    
 </main>
 
 <script src="./script.js"></script>
