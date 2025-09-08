@@ -10,8 +10,6 @@ body {
 
 /* ===== Container padrão ===== */
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
     padding: 20px 16px;
     box-sizing: border-box;
 }
@@ -28,6 +26,26 @@ nav {
     text-decoration: none;
     color: black;
 }
+
+
+
+/* === LINKS VISÍVEIS EM TELAS GRANDES === */
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+
+
+
+
+
 
 /* Botão do menu */
 .menu-btn {
@@ -79,43 +97,72 @@ nav {
 
 /* ===== Seção Início ===== */  
 
-.inicio{
-    padding-top: 125px;
-    padding-bottom: 150px;
-}
-
-.inicio h1 {
-    text-align: left;
-    justify-content: left;
-    font-size: 60px;
-    color: white;
-    text-shadow: 4px 4px 8px rgba(0,0,0,0.7);
-    margin-bottom: 30px;
-}
-
-.inicio h1.titulo {
-    font-size: 75px;
-    margin-bottom: 10px;
-}
-
-.inicio a{
-    text-decoration: none;
-    color: white;
-    background-color: rgb(54, 54, 224);
-    border-radius: 20px;
-    padding: 10px;
-}
-.inicio a:hover{
-    background-color: rgb(54, 54, 224);
-    color: black;
-    padding: 12px;
-    transition: 0.3s;
-}
-
+/* SECTION: Hero/Intro */
 section.inicio {
     background-image: url('/img/fundo.jpg');
     background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+    padding-top: 125px;
+    padding-bottom: 150px;
+    display: flex;
+    align-items: flex-start; /* Corrigido de 'left' para 'flex-start' */
+    justify-content: center;
+    flex-direction: column;
+    text-align: left;
+    padding-left: 5%;
+    padding-right: 5%;
+    color: white;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
 }
+
+/* Optional dark overlay for better text contrast */
+section.inicio::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+}
+
+/* HEADINGS */
+.inicio h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color : white;
+}
+
+.inicio h1.titulo {
+    font-size: 4.5rem;
+    margin-bottom: 15px;
+    padding-left: 10px;
+}
+
+/* CTA BUTTON */
+.inicio a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: #3636e0;
+    border-radius: 30px;
+    padding: 12px 28px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.inicio a:hover {
+    background-color: white;
+    color: #3636e0;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
 
 /* ===== Carrossel de Cards ===== */
 
@@ -208,4 +255,38 @@ section.inicio {
 .carrossel button:hover {
   background: white;
   color: black;
+}
+
+
+/* === RESPONSIVIDADE === */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Esconde os links na nav no mobile */
+    }
+
+    .menu-btn {
+        display: block; /* Mostra botão hambúrguer */
+    }
+     .inicio h1 {
+        font-size: 2.5rem;
+    }
+
+    .inicio h1.titulo {
+        font-size: 3rem;
+    }
+
+    .inicio a {
+        font-size: 1rem;
+        padding: 10px 22px;
+    }
+}
+
+@media (min-width: 769px) {
+    .menu-btn {
+        display: none; /* Esconde botão hambúrguer no desktop */
+    }
+
+    .sidebar {
+        display: none; /* Esconde o menu lateral no desktop */
+    }
 }

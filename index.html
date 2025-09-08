@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,31 +13,47 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
+
 <body class="montserrat-fonte">
 
-<header>
-    <nav id="navbar">
-        <a class="titulo" href="#"> <h4>Prof. Raquel Zanelatto</h4></a>
-        <button class="menu-btn" onclick="abrirMenu()">☰</button>
-        <div id="sidebar" class="sidebar">
-            <a href="javascript:void(0)" class="close-btn" onclick="fecharMenu()">×</a>
-            <a href="#">Início</a>
-            <a href="#">Sobre</a>
-            <a href="#">Serviços</a>
-            <a href="#">Contato</a>
-        </div>
-    </nav>
-</header>
+    <header>
+        <nav id="navbar">
+            <a class="titulo" href="#">
+                <h4>Prof. Raquel Zanelatto</h4>
+            </a>
 
-<main>
-    <section class="inicio">
-        <div class="container">
-            <h1 class="titulo">Vagas limitadas!</h1>
-            <h1>Consultoria<br> online</h1>
-            <a href="#">Quero Fazer Meu Cadastro</a>
-        </div>
-    </section>
+            <!-- Links para telas grandes -->
+            <div class="nav-links">
+                <a href="#">Início</a>
+                <a href="#">Sobre</a>
+                <a href="#">Serviços</a>
+                <a href="#">Contato</a>
+            </div>
 
+            <!-- Botão hambúrguer (telas pequenas) -->
+            <button class="menu-btn" onclick="abrirMenu()">☰</button>
+
+            <!-- Sidebar (menu lateral em mobile) -->
+            <div id="sidebar" class="sidebar">
+                <a href="javascript:void(0)" class="close-btn" onclick="fecharMenu()">×</a>
+                <a href="#">Início</a>
+                <a href="#">Sobre</a>
+                <a href="#">Serviços</a>
+                <a href="#">Contato</a>
+            </div>
+        </nav>
+
+    </header>
+
+    <main>
+        <section class="inicio">
+            <div class="container">
+                <h1 class="titulo">Vagas limitadas!</h1>
+                <h1>Consultoria <br> online</h1>
+                <a href="#">Quero Fazer Meu Cadastro</a>
+            </div>
+        </section>
+        <!--
     <section class="carrossel">
         <h1>Confira alguns resultados!</h1>
 
@@ -54,12 +71,14 @@
             <button id="next">→</button>
         </div>
 </section>
+    -->
 
 
 
-    
-</main>
 
-<script src="./script.js"></script>
+    </main>
+
+    <script src="./script.js"></script>
 </body>
+
 </html>
