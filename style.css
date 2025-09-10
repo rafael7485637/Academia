@@ -204,9 +204,9 @@ section.inicio::before {
   border-radius: 20px;
   overflow: hidden;
   background: #333;
-  transition: all 0.5s ease;
-  opacity: 0.6;
   box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  opacity: 0.6;
+  transition: transform 0.5s ease, width 0.5s ease, height 0.5s ease, opacity 0.5s ease, box-shadow 0.5s ease;
 }
 
 .card img {
