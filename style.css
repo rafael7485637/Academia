@@ -1,26 +1,36 @@
 /* ===== Reset básico ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
     margin: 0;
     overflow-x: hidden;
 }
+
 
 .montserrat-fonte {
     font-family: "Montserrat", sans-serif;
 }
 
 /* ===== Container padrão ===== */
+
 .container {
     padding: 20px 16px;
     box-sizing: border-box;
 }
 
 /* ===== Barra de navegação ===== */
+
 nav {
-    padding: 8px 15px; /* diminui o padding vertical */
+    padding: 8px 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 
 .titulo {
     text-decoration: none;
@@ -30,10 +40,12 @@ nav {
 
 
 /* === LINKS VISÍVEIS EM TELAS GRANDES === */
+
 .nav-links {
     display: flex;
     gap: 20px;
 }
+
 
 .nav-links a {
     text-decoration: none;
@@ -48,6 +60,7 @@ nav {
 
 
 /* Botão do menu */
+
 .menu-btn {
     cursor: pointer;
     padding: 10px 15px;
@@ -58,9 +71,10 @@ nav {
 }
 
 /* ===== Menu lateral ===== */
+
 .sidebar {
     height: 100%;
-    width: 0; /* controlado pelo JS */
+    width: 0;
     position: fixed;
     top: 0;
     right: 0;
@@ -72,6 +86,7 @@ nav {
     box-shadow: -4px 0 10px rgba(0,0,0,0.3);
 }
 
+
 .sidebar a {
     padding: 12px 20px;
     text-decoration: none;
@@ -81,11 +96,13 @@ nav {
     transition: background-color 0.3s ease;
 }
 
+
 .sidebar a:hover {
     background-color: rgba(255,255,255,0.1);
 }
 
 /* Botão de fechar no menu lateral */
+
 .close-btn {
     position: absolute;
     top: 10px;
@@ -97,196 +114,201 @@ nav {
 
 /* ===== Seção Início ===== */  
 
-/* SECTION: Hero/Intro */
-section.inicio {
-    background-image: url('/img/fundo.jpg');
-    background-size: cover;
-    background-position: left;
-    background-repeat: no-repeat;
-    padding-top: 125px;
-    padding-bottom: 150px;
-    display: flex;
-    align-items: flex-start; /* Corrigido de 'left' para 'flex-start' */
-    justify-content: center;
-    flex-direction: column;
-    text-align: left;
-    padding-left: 5%;
-    padding-right: 5%;
-    color: white;
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
-}
-
-/* Optional dark overlay for better text contrast */
-section.inicio::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    z-index: -1;
-}
-
-/* HEADINGS */
-.inicio h1 {
-    font-size: 3.5rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-    color : white;
-}
-
-.inicio h1.titulo {
-    font-size: 4.5rem;
-    margin-bottom: 15px;
-    padding-left: 10px;
-}
-
-/* CTA BUTTON */
-.inicio a {
-    display: inline-block;
-    text-decoration: none;
-    color: white;
-    background-color: #3636e0;
-    border-radius: 30px;
-    padding: 12px 28px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
-
-.inicio a:hover {
-    background-color: white;
-    color: #3636e0;
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
-}
-
-
-/* ===== Carrossel de Cards ===== */
-
-.carrossel {
-  text-align: center;
-  padding: 80px 0;
-  background: rgba(0, 0, 0, 0.6);
-}
-
-.carrossel h1 {
-  font-size: 50px;
-  margin-bottom: 40px; /* espaço entre o título e o carrossel */
-  color: white;
-}
-
-.carousel {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
+/* Hero */
+.hero {
   position: relative;
-}
-
-.carousel-wrapper {
+  height: 80vh;
+  background: url("/img/fundo.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 20px; /* espaço entre botões e carrossel */
+  padding-left: 50px;
 }
 
-.carousel {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
 }
 
-.card {
-  border-radius: 20px;
-  overflow: hidden;
-  background: #333;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
-  opacity: 0.6;
-  transition: transform 0.5s ease, width 0.5s ease, height 0.5s ease, opacity 0.5s ease, box-shadow 0.5s ease;
-}
-
-.card img {
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  background: rgba(0,0,0,0.6); /* escurece a imagem */
 }
 
-/* Camadas */
-.card.far {        /* mais distante */
-  width: 160px;
-  height: 260px;
-  opacity: 0.5;
-  transform: scale(0.75);
-  z-index: 0;
-}
-
-.card.near {       /* lateral próxima */
-  width: 220px;
-  height: 340px;
-  opacity: 0.7;
-  transform: scale(0.9);
+.hero-content {
+  position: relative;
+  color: #fff;
+  max-width: 500px;
   z-index: 1;
 }
 
-.card.active {     /* central */
-  width: 300px;
-  height: 420px;
-  opacity: 1;
-  transform: scale(1);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.8);
-  z-index: 2;
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
+
+.hero-content h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background: #3b24f7;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #2a16c7;
+}
+
+/* ===== Carrossel de Cards ===== */
+
+
+.carrossel {
+    text-align: center;
+}
+
+
+.carrossel h1 {
+    font-size: 50px;
+    margin-bottom: 40px;
+    color: rgb(255, 255, 255);
+}
+
+
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+}
+
+
+.carousel-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+/* .carousel já definido acima */
+
+
+.card {
+    border-radius: 20px;
+    overflow: hidden;
+    background: #000000;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    opacity: 0.6;
+    transition: transform 0.5s ease, width 0.5s ease, height 0.5s ease, opacity 0.5s ease, box-shadow 0.5s ease;
+    position: relative;
+    will-change: transform, opacity;
+}
+
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.1s ease;
+}
+
+
+.carousel-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Camadas */
+
+.card.far {
+    width: 160px;
+    height: 260px;
+    opacity: 0.5;
+    transform: scale(0.75);
+    z-index: 0;
+}
+
+
+.card.near {
+    width: 220px;
+    height: 340px;
+    opacity: 0.7;
+    transform: scale(0.9);
+    z-index: 1;
+}
+
+
+.card.active {
+    width: 300px;
+    height: 420px;
+    opacity: 1;
+    transform: scale(1);
+    z-index: 2;
+}
+
 
 .carrossel button {
-  background: none;
-  border: 2px solid white;
-  color: white;
-  padding: 10px 15px;
-  border-radius: 10px;
-  font-size: 18px;
-  cursor: pointer;
-  transition: 0.3s;
+    background: none;
+    border: 2px solid rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
+
 .carrossel button:hover {
-  background: white;
-  color: black;
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 
 
 /* === RESPONSIVIDADE === */
+
 @media (max-width: 768px) {
     .nav-links {
-        display: none; /* Esconde os links na nav no mobile */
+        display: none;
     }
-
     .menu-btn {
-        display: block; /* Mostra botão hambúrguer */
+        display: block;
     }
-     .inicio h1 {
+    .inicio h1 {
         font-size: 2.5rem;
     }
-
     .inicio h1.titulo {
         font-size: 3rem;
     }
-
     .inicio a {
         font-size: 1rem;
         padding: 10px 22px;
     }
 }
 
+
 @media (min-width: 769px) {
     .menu-btn {
-        display: none; /* Esconde botão hambúrguer no desktop */
+        display: none;
     }
-
     .sidebar {
-        display: none; /* Esconde o menu lateral no desktop */
+        display: none;
     }
 }
