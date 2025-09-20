@@ -18,14 +18,14 @@ body {
 /* ===== Container padrão ===== */
 
 .container {
-    padding: 20px 16px;
+    padding: 16px 30px;
     box-sizing: border-box;
 }
 
 /* ===== Barra de navegação ===== */
 
 nav {
-    padding: 8px 15px;
+    padding: 25px 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
